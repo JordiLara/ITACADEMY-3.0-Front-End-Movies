@@ -335,11 +335,11 @@ describe('Function "moviesAverageByCategory"', () => {
   });
 
 });
-describe('Function "moviesAverageByCategory"', () => {
+/*describe('Function "moviesAverageByCategory"', () => {
   it('ADD YOUR CODE IN films.spec.js file', () => {
     expect(typeof hoursToMinutes).toBe('coffee');
   });
-});
+});*/
 
 // Exercise 7
 describe('Function "hoursToMinutes"', () => {
