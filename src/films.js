@@ -62,8 +62,23 @@ function moviesAverageByCategory(movies, category) {
 }
 
 // Exercise 7: Modify the duration of movies to minutes
-function hoursToMinutes() {
 
+function hoursToMinutes(movies) {
+
+  const newMovies = movies.map(movie => Object.assign({}, movie));
+
+  for (let i = 0; i < movies.length; i++) {
+    let newMovie = newMovies[i];
+    let movieTime = newMovie.duration.match(/(\d+)?h\s*(\d+)?(min)?/);
+
+    if (movieTime) {
+      const hours = parseInt(movieTime[1]) || 0;
+      const minutes = parseInt(movieTime[2]) || 0;
+      const timeInMinutes = hours * 60 + minutes;
+      newMovie.duration = timeInMinutes;
+    }
+  }
+  return newMovies;
 }
 
 // Exercise 8: Get the best film of a year
